@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="WEB-INF/template/template.xhtml">
+	<ui:define name="content">
+		<section class="hero is-primary is-fullheight">
+		<div class="hero-body">
+			<div class="container">
+				<div class="columns is-centered">
+					<div class="column is-5-tablet is-4-desktop is-3-widescreen">
+						<h1>Cadastro de Alunos</h1>
+						<form name="frmCadastro" action="insert">
+							<table>
+								<tr>
+									<td>Matricula*:</td>
+									<td><input type="text" name="id" placeholder="Matricula"></input></td>
+								</tr>
+								<tr>
+									<td>Nome*:</td>
+									<td><input type="text" name="nome" placeholder="Nome"></input></td>
+								</tr>
+								<tr>
+									<td>E-mail*:</td>
+									<td><input type="text" name="email" placeholder="E-mail"></input></td>
+								</tr>
+								<tr>
+									<td>Telefone:</td>
+									<td><input type="text" name="fone"
+										placeholder="(00)00000-0000"></input></td>
+								</tr>
+							</table>
+							<input type="button" value="Salvar" onclick="validar()"></input><input
+								type="reset" value="Limpar"></input>
+						</form>
+						<p></p>
+						<a href="home">Sair</a>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>
+		<script src="scripts/validador.js"></script>
+	</ui:define>
+</ui:composition>
+</html>
